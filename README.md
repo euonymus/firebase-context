@@ -7,6 +7,20 @@ This provides react context for firebase
 * firebase
 
 
+## How to publish
+
+* Transpile the file
+
+```
+$ npm run transpile
+```
+
+* Publish
+
+```
+$ npm publish
+```
+
 ## How to use
 
 [Provider]

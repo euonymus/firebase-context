@@ -9,6 +9,10 @@
     "start": "webpack-dev-server --mode development",
     "prepublishOnly": "npm run transpile"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/euonymus/firebase-context"
+  },
   "keywords": [
     "firebase",
     "react",
