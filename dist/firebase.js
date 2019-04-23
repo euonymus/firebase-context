@@ -100,7 +100,7 @@ var Firebase = function Firebase(config) {
 
 
   this.onAuthStateChanged = function (func, next, fallback) {
-    _this.auth.onAuthStateChanged(
+    _this.unsubscribeOnAuthStateChanged = _this.auth.onAuthStateChanged(
     /*#__PURE__*/
     function () {
       var _ref = (0, _asyncToGenerator2["default"])(
