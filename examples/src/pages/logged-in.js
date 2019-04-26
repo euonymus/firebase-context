@@ -11,7 +11,7 @@ class Loggedin extends React.Component {
         { isAnonymous ? (
             <p>You are anonymously logged in</p>
         ): emailVerified ? (
-            <p>Your email is has been verified</p>
+            <p>Your email has been verified</p>
         ) : (
             <p>Your email is not verified</p>
         )}

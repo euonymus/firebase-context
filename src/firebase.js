@@ -55,7 +55,7 @@ class Firebase {
     // next:     a function you want to apply after func succeeded
     // fallback: a function you want to apply after func failed
     this.onAuthStateChanged = (func, next, fallback) => {
-      this.unsubscribeOnAuthStateChanged = this.auth.onAuthStateChanged(async authUser => {
+      return this.auth.onAuthStateChanged(async authUser => {
         authUser = await func(authUser)
         if (authUser) {
           next(authUser)
@@ -64,6 +64,7 @@ class Firebase {
         }
       })
     }
+
   }
 }
 
