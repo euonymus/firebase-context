@@ -72,11 +72,9 @@ var Firebase = function Firebase(config) {
   };
 
   this.doSendEmailVerification = function (url) {
-    console.log('in email');
     var params = {};
 
     if (url) {
-      console.log('in url if');
       params = {
         url: url
       };

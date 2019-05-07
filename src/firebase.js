@@ -37,10 +37,8 @@ class Firebase {
     this.doPasswordReset = email => this.auth.sendPasswordResetEmail(email)
 
     this.doSendEmailVerification = (url) => {
-      console.log('in email')
       let params = {}
       if (url) {
-        console.log('in url if')
         params = { url }
       }
       this.auth.currentUser.sendEmailVerification(params)
