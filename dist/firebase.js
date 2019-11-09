@@ -9,8 +9,6 @@ exports["default"] = void 0;
 
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
 
-var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
 var _app = _interopRequireDefault(require("firebase/app"));
@@ -98,40 +96,30 @@ var Firebase = function Firebase(config) {
 
 
   this.onAuthStateChanged = function (func, next, fallback) {
-    return _this.auth.onAuthStateChanged(
-    /*#__PURE__*/
-    function () {
-      var _ref = (0, _asyncToGenerator2["default"])(
-      /*#__PURE__*/
-      _regenerator["default"].mark(function _callee(authUser) {
-        return _regenerator["default"].wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                _context.next = 2;
-                return func(authUser);
+    return _this.auth.onAuthStateChanged(function _callee(authUser) {
+      return _regenerator["default"].async(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return _regenerator["default"].awrap(func(authUser));
 
-              case 2:
-                authUser = _context.sent;
+            case 2:
+              authUser = _context.sent;
 
-                if (authUser) {
-                  next(authUser);
-                } else {
-                  fallback();
-                }
+              if (authUser) {
+                next(authUser);
+              } else {
+                fallback();
+              }
 
-              case 4:
-              case "end":
-                return _context.stop();
-            }
+            case 4:
+            case "end":
+              return _context.stop();
           }
-        }, _callee);
-      }));
-
-      return function (_x) {
-        return _ref.apply(this, arguments);
-      };
-    }());
+        }
+      });
+    });
   };
 };
 
