@@ -1,6 +1,6 @@
 {
   "name": "firebase-context",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "This provides react context for firebase",
   "main": "dist/index.js",
   "scripts": {
@@ -52,6 +52,6 @@
     "react-dom": "^16.8.6"
   },
   "dependencies": {
-    "firebase": "^5.11.1"
+    "firebase": "^7.3.0"
   }
 }
