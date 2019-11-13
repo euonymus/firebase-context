@@ -29,6 +29,7 @@ var Firebase = function Firebase(config) {
   this.serverValue = _app["default"].firestore.ServerValue;
   /* Firebase APIs */
 
+  this.app = _app["default"];
   this.auth = _app["default"].auth();
   this.db = _app["default"].firestore();
   /* Social Sign In Method Provider */
