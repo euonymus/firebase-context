@@ -11,6 +11,7 @@ class Firebase {
     this.serverValue = app.firestore.ServerValue
     
     /* Firebase APIs */
+    this.app = app
     this.auth = app.auth()
     this.db = app.firestore()
     
